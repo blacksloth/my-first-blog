@@ -1,21 +1,13 @@
-<html>
-    <head>
-        <title>blacksloth' blog</title>
-    </head>
-    <body>
-        <div>
-            <h1><a href="">blacksloth' world</a></h1>
-            <h3>Lazy news from planet slow-mo</h3>
-        </div>
-        
-        <br>
-        
-        {% for post in posts %}
-            <div>
-                <h2><a href="">{{ post.title }}</a></h2>
+{% extends 'blog/base.html' %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <div class="date">
                 <p>published: {{ post.published_date }}</p>
-                <p>{{ post.text|linebreaksbr }}</p>
             </div>
-        {% endfor %}
-    </body>
-</html>
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
