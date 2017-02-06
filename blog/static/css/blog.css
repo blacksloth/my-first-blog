@@ -29,7 +29,7 @@ h1, h2, h3, h4 {
 
 .post-form textarea, .post-form input, body {
     width: 100%;
-    color: white;
+    color: grey;
     background-color: black;
 }
 
@@ -42,10 +42,14 @@ h1, h2, h3, h4 {
 
 .post {
     margin-bottom: 70px;
-    color: white;
+    color: grey;
     background-color: black;
 }
 
 .post h1 a, .post h1 a:visited {
     color: #8200ED;
+}
+span  {
+	color: #FCA205;
+	border-style: dotted;
 }
